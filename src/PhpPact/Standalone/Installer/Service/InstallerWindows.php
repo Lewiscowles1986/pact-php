@@ -23,7 +23,7 @@ class InstallerWindows extends AbstractInstaller
             'version'       => self::PACT_STUB_SERVER_VERSION,
             'versionPrefix' => 'v',
             'extract'       => true,
-            'extractTo'     => 'pact-stub-server.exe',
+            'extractTo'     => 'pact-stub-service.bat',
             'executable'    => true,
         ],
         [
