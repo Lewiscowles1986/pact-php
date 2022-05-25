@@ -51,7 +51,7 @@ class InstallerLinux extends AbstractInstaller
     protected function getScripts(string $destinationDir): Scripts
     {
         $destinationDir = $destinationDir . DIRECTORY_SEPARATOR;
-        $binDir         = $destinationDir . 'pact' . DIRECTORY_SEPARATOR . 'bin' . DIRECTORY_SEPARATOR;
+        $binDir         = $destinationDir . 'bin' . DIRECTORY_SEPARATOR;
 
         return new Scripts(
             $destinationDir . 'pact.h',

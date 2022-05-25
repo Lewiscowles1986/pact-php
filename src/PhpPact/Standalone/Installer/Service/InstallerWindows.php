@@ -51,12 +51,12 @@ class InstallerWindows extends AbstractInstaller
     protected function getScripts(string $destinationDir): Scripts
     {
         $destinationDir = $destinationDir . DIRECTORY_SEPARATOR;
-        $binDir         = $destinationDir . 'pact' . DIRECTORY_SEPARATOR . 'bin' . DIRECTORY_SEPARATOR;
+        $binDir         = $destinationDir . 'bin' . DIRECTORY_SEPARATOR;
 
         return new Scripts(
             $destinationDir . 'pact.h',
             $destinationDir . 'pact_ffi.dll',
-            $destinationDir . 'pact-stub-server.exe',
+            $binDir . 'pact-stub-service.bat',
             $binDir . 'pact-broker.bat'
         );
     }

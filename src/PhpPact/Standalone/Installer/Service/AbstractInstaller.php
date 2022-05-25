@@ -104,7 +104,7 @@ abstract class AbstractInstaller implements InstallerInterface
         if (\substr($sourceFile, -7) === '.tar.gz') {
             $this->extractTarGz($sourceFile, $destinationDir);
         } elseif (\substr($sourceFile, -4) === '.zip') {
-            $this->extractZip($sourceFile, $destinationDir);
+            $this->extractZip($sourceFile, $destinationDir . DIRECTORY_SEPARATOR . '..');
         } else {
             $this->extractGz($sourceFile, $fileName, $executable);
         }
