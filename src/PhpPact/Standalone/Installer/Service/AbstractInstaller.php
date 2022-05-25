@@ -102,7 +102,7 @@ abstract class AbstractInstaller implements InstallerInterface
     private function extract(string $sourceFile, string $destinationDir, ?string $fileName, bool $executable): self
     {
         if (\substr($sourceFile, -7) === '.tar.gz') {
-            $this->extractTarGz($sourceFile, $destinationDir);
+            $this->extractTarGz($sourceFile, $destinationDir . DIRECTORY_SEPARATOR . '..');
         } elseif (\substr($sourceFile, -4) === '.zip') {
             $this->extractZip($sourceFile, $destinationDir . DIRECTORY_SEPARATOR . '..');
         } else {
